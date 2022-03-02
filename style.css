@@ -20,6 +20,7 @@ body {
     color: var(--accent-light);
     scroll-behavior: smooth;
 }
+
 /*--------------------global-----------------------*/
 .section-title {
     text-transform: uppercase;
@@ -34,7 +35,9 @@ body {
     width: 1140px;
     padding: 5px 15px;
     margin: 0 auto;
+
 }
+
 /*------------------------header--------------------------------*/
 
 header a {
@@ -56,11 +59,84 @@ header a {
 
 }
 
+/*--------------logo-------------*/
+a {
+    margin: 0;
+    padding: 0;
+    color: var(--accent-light);
+}
+
+a span {
+    margin: 0;
+    padding: 0;
+    animation: animate 2s linear infinite;
+}
+
+a span:nth-child(1) {
+    animation-delay: 0.25s;
+}
+
+a span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+a span:nth-child(3) {
+    animation-delay: 0.75s;
+}
+
+a span:nth-child(4) {
+    animation-delay: 1s;
+}
+
+a span:nth-child(5) {
+    animation-delay: 1.25s;
+}
+
+a span:nth-child(6) {
+    animation-delay: 1.5s;
+}
+
+a span:nth-child(7) {
+    animation-delay: 0.25s;
+}
+
+a span:nth-child(8) {
+    animation-delay: 1.75s;
+}
+
+
+@keyframes animate {
+
+    0%,
+    100% {
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #0c5e81,
+            0 0 10px #00b3ff,
+            0 0 20px #00b3ff,
+            0 0 40px #00b3ff,
+            0 0 80px #00b3ff,
+            0 0 120px #00b3ff,
+            0 0 200px #00b3ff,
+            0 0 300px #00b3ff,
+            0 0 400px #00b3ff;
+    }
+
+    5%,
+    95% {
+        color: #222;
+        filter: blur(0px);
+        text-shadow: none;
+    }
+}
+
+/*---------------------animotion end----------------------------*/
+
 .header-logo {
     width: 20%;
     font-size: 30px;
     font-weight: 800;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
 }
 
 .header-menu {
@@ -70,6 +146,7 @@ header a {
     list-style: none;
 
 }
+
 .header-menu-link {
     text-transform: uppercase;
     padding: 15px;
@@ -88,8 +165,15 @@ header a {
 }
 
 .intro-left {
-    width: 30%;
+    width: 27%;
+    border-radius: 50%;
+    text-align: center;
+    transition: 0.5s;
 
+}
+
+.intro-left:hover {
+    box-shadow: 0 0 30px 0px var(--accent);
 }
 
 .intro-img {
@@ -107,6 +191,7 @@ header a {
 }
 
 .intro-rigth {
+    padding-left: 20px;
     width: 60%;
 }
 
@@ -114,9 +199,10 @@ header a {
 h3 {
     margin: 0 0 15px;
 }
+
 .intro-rigth p {
-    letter-spacing: 1px;
-    
+    letter-spacing: 0.5px;
+
 }
 
 
@@ -138,7 +224,15 @@ h3 {
 /*-----------------------skills------------------*/
 .skills {
     background-color: var(--accent);
+}
 
+.skills-col {
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.skills-col:hover {
+    box-shadow: 0 0 20px 0px white;
 }
 
 .skills ul {
@@ -158,8 +252,9 @@ h3 {
     color: #fff;
     background-color: var(--accent-light);
 }
+
 .skills h2 {
-    padding: 15px 0;
+    padding-bottom: 20px;
     color: #fff;
 }
 
@@ -169,7 +264,16 @@ h3 {
 
 }
 
+.code h2 {
+    padding-top: 60px;
+    padding-bottom: 0;
+}
+
 .code p {
+    padding: 15px 0 20px;
+}
+
+.code pre {
     font-style: italic;
 }
 
@@ -186,4 +290,65 @@ h3 {
     border-radius: 4px;
 }
 
-/*---------------------------------------------------*/
+/*---------------------portfolio------------------------------*/
+
+
+/*--------------------languages---------------------------------------*/
+.languages {
+    background: -webkit-linear-gradient(90deg, #6cff95, #1e524e);
+    background: linear-gradient(90deg, #6cff95, #1e524e);
+    color: #fff;
+}
+
+.languages-col {
+    box-sizing: border-box;
+}
+
+.languages ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+
+.languages li {
+    padding: 10px 30px;
+    text-align: center;
+    border-radius: 4px;
+    color: #fff;
+    background-color: var(--accent-light);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+
+
+/*--------------------------footer----------------------------*/
+.footer {
+    background-color: black;
+    padding: 20px;
+}
+
+.footer p {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer a {
+    list-style: none;
+    color: #fff;
+    padding-left: 5px;
+    text-decoration: none;
+}
+.icons {
+    text-align: center;
+}
+.fa {
+    margin: 10px;
+}
+.icons a {
+    color: var(--accent-light);
+}
